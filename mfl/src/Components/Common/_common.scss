@@ -1,0 +1,442 @@
+@import "../../Assets/Style/mixin.scss";
+.card_wrap {
+  background-color: #ffffff;
+  border: 1px solid #efefef;
+  border-radius: 10px;
+
+  .swiper-box {
+    .swiper-img {
+      position: relative;
+      img {
+        width: 100%;
+        border-radius: 5px;
+      }
+      .swiper-pagination-bullet-active {
+        background: var(--card-gradient1);
+        border-radius: 5.5px;
+        width: 15px;
+        height: 4px;
+      }
+      .swiper-pagination-bullet {
+        background-color: var(--header-black);
+        border-radius: 5.5px;
+        width: 15px;
+        height: 4px;
+      }
+      .swiper-horizontal {
+        padding-bottom: 22px;
+      }
+      .points-rect {
+        @include flextype(null, center);
+        position: absolute;
+        background-color: var(--color-white);
+        border: 1px solid var(--color-whitishgrey);
+        border-radius: 4px;
+        z-index: 1;
+        bottom: 26px;
+        left: 10px;
+        padding: 0px 7px;
+
+        span {
+          @include formText(var(--header-black), 12px, 400, null);
+          white-space: nowrap;
+        }
+      }
+      .whislist-icon {
+        position: absolute;
+        right: 8px;
+        top: 0px;
+        z-index: 1;
+      }
+    }
+  }
+  .box-details {
+    padding: 10px 12px;
+    .name-cloth {
+      text-align: left;
+      span {
+        text-align: left;
+        @include formText(var(--header-black), 16px, 600, 20px);
+      }
+
+      p {
+        @include formText(var(--color-grey), 14px, 400, 20px);
+        text-align: left;
+        margin: 0px;
+      }
+      .price-offer {
+        @include flextype(null, center);
+        gap: 10px;
+
+        span {
+          @include formText(var(--text-color3), 16px, 400, 19px);
+
+          text-align: left;
+
+          &.offer {
+            @include formText(var(--color-green), 14px, 400, 17px);
+            text-align: left;
+          }
+          &.cutprice {
+            @include formText(var(--color-grey), 14px, 400, 17px);
+            text-align: left;
+            text-decoration: line-through;
+          }
+        }
+      }
+    }
+  }
+}
+.filter_wrap {
+  text-align: left;
+  background-color: var(--color-white);
+  max-width: 271px;
+  padding: 20px 10px;
+  span {
+    @include formText(var(--header-black), 18px, 600, 26px);
+    text-align: left;
+  }
+  .btn-filter {
+    @include flextype(null, center);
+    gap: 10px;
+    margin-top: 10px;
+    border-bottom: 1px solid var(--color-whitishgrey);
+    padding-bottom: 26px;
+
+    button {
+      border: none;
+
+      &.clr-btn {
+        border: 1px solid var(--color-orange);
+        border-radius: 4px;
+        background-color: var(--color-white);
+        @include formText(var(--color-orange), 14px, 500, 17px);
+        padding: 8px 0px;
+        white-space: nowrap;
+        width: 50%;
+      }
+      &.apply-btn {
+        background-color: var(--color-orange);
+        border-radius: 4px;
+        @include formText(var(--color-white), 14px, 500, 17px);
+        padding: 9px 0px;
+        width: 50%;
+        text-align: center;
+      }
+    }
+  }
+  .filter-category {
+    .accordian-wrap {
+      padding: 10px;
+      border-bottom: 1px solid var(--color-whitishgrey);
+      .category {
+        @include flextype(space-between, center);
+        img {
+          cursor: pointer;
+        }
+      }
+      .checkbox_wrap {
+        .check-box {
+          @include flextype(null, center);
+          gap: 8px;
+          input[type="checkbox"] {
+            border: 1px solid var(--checkbox-border);
+            border-radius: 2px;
+            width: 15px;
+            height: 15px;
+            accent-color: var(--color-whitishgrey);
+            font-size: 10px;
+          }
+          span {
+            @include formText(var(--text-color1), 14px, 400, 26px);
+            text-align: left;
+            &.moreSpan {
+              @include formText(var(--color-lightblue), 14px, 400, 17px);
+              text-align: left;
+              margin: 10px 0px 10px 22px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.sortBtn_wrap {
+  @include flextype(flex-start, center);
+  gap: 17px;
+  span {
+    @include formText(var(--text-color6), 14px, 400, 17px);
+    text-align: left;
+  }
+  .btn-container {
+    @include flextype(null, center);
+    gap: 10px;
+    button {
+      border: 1px solid var(--btn-border);
+      border-radius: 4px;
+      opacity: 0.2998501090116279;
+      @include formText(var(--text-color6), 14px, 400, 17px);
+      padding: 6px 20px;
+      text-align: left;
+      &.active {
+        opacity: 100%;
+        padding: 6px 16px;
+      }
+    }
+  }
+}
+.dealCard_wrap {
+  min-height: 271px;
+  height: 100%;
+  max-width: 304px;
+  // background-color: var(--color-white);
+  // border: 1px solid var(--color-whitishgrey);
+  @include borderBackground(
+    1px solid var(--color-whitishgrey),
+    var(--color-white),
+    4px,
+    none
+  );
+  text-align: left;
+  img {
+    border-radius: 4px 4px 0px 0px;
+    width: 100%;
+  }
+  .deal-details {
+    padding: 15px 10px;
+    cursor: pointer;
+    h6 {
+      @include formText(var(--header-black), 16px, 600, 20px);
+      text-align: left;
+      margin: 0px;
+    }
+    span {
+      @include formText(var(--color-grey), 14px, 400, 20px);
+
+      text-align: left;
+    }
+  }
+}
+.categoryCard_wrap {
+  max-width: 171px;
+  //min-height: 174px;
+  @include borderBackground(
+    1px solid var(--color-whitishgrey),
+    var(--color-white),
+    4px,
+    null
+  );
+  .category-details {
+    text-align: center;
+    padding: 12px 10px;
+    span {
+      @include formText(var(--header-black), 16px, 600, 20px);
+    }
+    .viewOffer {
+      border-top: 1px solid var(--color-whitishgrey);
+      margin-top: 5px;
+      padding-top: 5px;
+
+      span {
+        @include formText(var(--color-lightblue), 14px, 400, 17px);
+        text-align: left;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.point_box_common {
+  background-color: #fafafa;
+  border: 1px solid #efefef;
+  border-radius: 4px;
+  text-align: center;
+  //margin-left: 5px;
+  padding: 2px 3px;
+  @include flextype(null, center);
+  gap: 5px;
+  max-width: 69px;
+
+  .span_nm {
+    @include formText(var(--header-black), 12px, 400, 0px);
+    text-align: left;
+  }
+}
+.dropdownBox {
+  position: relative;
+  width: 100%;
+  .span-img {
+    @include borderBackground(
+      1px solid var(--color-whitishgrey),
+      var(--color-white),
+      4px null
+    );
+    padding: 10px;
+    cursor: pointer;
+    .input-box {
+      width: 100%;
+      @include formText(var(--header-black), 16px, 400, 20px);
+      outline: none;
+    }
+    img {
+      position: absolute;
+      top: 22px;
+      right: 10px;
+      cursor: pointer;
+    }
+  }
+  .ul-li-drp {
+    @include borderBackground(
+      1px solid var(--color-whitishgrey),
+      var(--color-white),
+      4px,
+      null
+    );
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    ul {
+      list-style: none;
+      padding: 10px;
+      li {
+        @include formText(var(--header-black), 16px, 400, 20px);
+      }
+    }
+  }
+
+  label {
+    @include borderBackground(null,var(--color-white),null,null);
+    @include formText(var(--text-color2), 12px, 400, 14px);
+    position: absolute;
+    top: -6px;
+    left: 8px;
+  }
+}
+
+@media (max-width: 720px) {
+  .card_wrap {
+    .box-details {
+      .name-cloth {
+        span {
+          @include formText(var(--header-black), 14px, 600, 20px);
+        }
+        // p {
+        //   @include formText(var(--color-grey), 14px, 400, 20px);
+        // }
+        .price-offer {
+          span {
+            @include formText(var(--text-color3), 14px, 400, 19px);
+            &.offer {
+              @include formText(var(--color-green), 12px, 400, 17px);
+            }
+            &.cutprice {
+              @include formText(var(--color-grey), 12px, 400, 17px);
+            }
+          }
+        }
+      }
+    }
+  }
+  .dealCard_wrap {
+    .deal-details {
+      h6 {
+        @include formText(var(--header-black), 14px, 600, 20px);
+      }
+      span {
+        @include formText(var(--color-grey), 12px, 400, 20px);
+      }
+    }
+  }
+}
+//
+.container_M {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  .slider {
+    position: relative;
+    width: 200px;
+    .slider__track,
+    .slider__range,
+    .slider__left-value,
+    .slider__right-value {
+      position: absolute;
+    }
+    .slider__track,
+    .slider__range {
+      border-radius: 3px;
+      height: 5px;
+    }
+    .slider__track {
+      background-color: #ced4da;
+      width: 100%;
+      z-index: 1;
+    }
+    .slider__range {
+      background-color: var(--header-black);
+      z-index: 2;
+    }
+    .slider__left-value,
+    .slider__right-value {
+      color: #dee2e6;
+      font-size: 12px;
+      margin-top: 20px;
+    }
+  }
+  .slider__left-value {
+    left: 6px;
+  }
+  .slider__right-value {
+    right: -4px;
+  }
+  /* Removing the default appearance */
+  .thumb,
+  .thumb::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .thumb {
+    pointer-events: none;
+    position: absolute;
+    height: 0;
+    width: 200px;
+    outline: none;
+  }
+
+  .thumb--left {
+    z-index: 3;
+  }
+
+  .thumb--right {
+    z-index: 4;
+  }
+
+  /* For Chrome browsers */
+  .thumb::-webkit-slider-thumb {
+    background-color: #f1f5f7;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px #ced4da;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    margin-top: 4px;
+    pointer-events: all;
+    position: relative;
+  }
+  .thumb::-moz-range-thumb {
+    background-color: #f1f5f7;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px #ced4da;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    margin-top: 4px;
+    pointer-events: all;
+    position: relative;
+  }
+}

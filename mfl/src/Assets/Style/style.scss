@@ -1,0 +1,78 @@
+@import "./mixin.scss";
+
+.main-container {
+  height: 100vh;
+  overflow: auto;
+  @include borderBackground(null, var(--color-white), 4px, var(--box-shadow1));
+  // padding: 20px;
+}
+
+.container_grey {
+  background-color: var(--bg-tableHeader);
+  padding-top: 70px;
+  &.border {
+    border-radius: 4px;
+  }
+}
+.content-box {
+  @include borderBackground(
+    null,
+    var(--color-white),
+    4px,
+    0 4px 10px 0 rgba(0, 0, 0, 0.05)
+  );
+  padding: 20px;
+}
+
+// .with_label_input_content {
+.with_label_input {
+  position: relative;
+  width: 100%;
+  .form {
+    &__input {
+      width: 100%;
+      @include borderBackground(
+        1px solid var(--color-whitishgrey),
+        transparent,
+        4px
+      );
+      @include formText(var(--header-black), 16px, 400, 20px);
+      position: relative;
+      outline: none;
+      padding: 10px;
+      z-index: 1;
+
+      &:focus,
+      &:focus-visible,
+      &:not(:placeholder-shown).form__input:not(:focus) {
+        // border-color: $clr-yellowgreen;
+        @include borderBackground(
+          1px solid var(--color-whitishgrey),
+          var(--color-white),
+          4px
+        );
+        & ~ .form__label {
+          @include formText(var(--text-color2), 12px, 400, 14px);
+          top: -6px;
+          left: 8px;
+          z-index: 2;
+          background-color: var(--color-white);
+        }
+      }
+    }
+
+    &__label {
+      position: absolute;
+      @include formText(var(--text-color2), 16px, 400, 20px);
+      left: 5px;
+      top: 10px;
+      padding: 0 3px;
+      background-color: var(--color-white);
+      // border-radius: $raidius;
+      transition: 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+    }
+  }
+}
+
+
+// }

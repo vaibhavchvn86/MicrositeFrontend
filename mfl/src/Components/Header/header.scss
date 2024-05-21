@@ -1,0 +1,104 @@
+@import "../../Assets/Style/mixin.scss";
+
+.header_main_div {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  .bgHeader {
+    @include flextype(space-between, center);
+    @include borderBackground(none, var(--header-black), unset, 0 7px 10px 0 rgba(0, 0, 0, 0.17));
+    padding: 0px 45px;
+    .imgSearch {
+      @include flextype(null, center);
+      width: 70%;
+      .searchBox {
+        width: 100%;
+
+        .inputForm {
+          width: 70%;
+          outline: none;
+          background-color: #ffffff;
+          border-radius: 6px 0 0 6px;
+
+          padding: 14px 10px 13px;
+          border: none;
+          @include formText(var(--color-grey), 14px, 400, 17px);
+          text-align: left;
+        }
+        .srcImg {
+          background-color: var(--color-srhorange);
+          border-radius: 0 6px 6px 0;
+          padding: 10px 10px;
+          border: none;
+        }
+      }
+    }
+    .login-img_wrap {
+      @include flextype(space-between, center);
+      gap: 30px;
+      .img-wrap {
+        display: flex;
+        gap: 24px;
+        .img-fluid {
+          cursor: pointer;
+        }
+      }
+      .loginBtn {
+        @include borderBackground(none, var(--color-loginbg), 4px, unset);
+        outline: none;
+        padding: 13px 24px;
+        @include formText(var(--color-white), 16px, 400, 19px);
+        text-align: center;
+      }
+    }
+  }
+
+  .subHeader {
+    width: 100%;
+    @include borderBackground(null, var(--color-white), null, var(--box-shadow2));
+    padding: 10px;
+    margin: 0 !important;
+    .optionTab {
+      @include flextype(center, center);
+      gap: 60px;
+      .option_div {
+        @include formText(var(--color-black), 16px, 400, 24px);
+        text-decoration: none;
+      }
+    }
+    .redeem_div {
+      text-align: end;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header_main_div {
+    .bgHeader {
+      padding: 0 20px;
+      .imgSearch {
+        .searchBox {
+          .inputForm{
+            width: 55%;
+            padding: 10px;
+          }
+          .srcImg{
+            padding: 5px 5px 7px;
+          }
+        }
+        .logo_div {
+          max-width: 60px;
+        }
+      }
+      .login-img_wrap {
+        .img-wrap{
+          gap:4px;
+        }
+        .loginBtn {
+          font-size: 14px;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}

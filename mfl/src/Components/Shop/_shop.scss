@@ -1,0 +1,906 @@
+@import "../../Assets/Style/mixin.scss";
+
+.top-view {
+  @include flextype(space-between, center);
+  span {
+    @include formText(var(--color-footer-bottom), 22px, 600, 30px);
+    text-align: left;
+  }
+  button {
+    @include formText(var(--color-black), 16px, 400, 19px);
+    text-align: right;
+    border: none;
+    background-color: var(--bg-tableHeader);
+  }
+}
+.swp {
+  .swiper-slide {
+    img {
+      max-width: 100%;
+
+      cursor: pointer;
+      border-radius: 4px 4px 0px 0px;
+    }
+  }
+  .swiper {
+    .swiper-button-next {
+      width: 56px;
+      height: 56px;
+      background-color: var(--color-white);
+      opacity: 0.86;
+      border-radius: 100%;
+    }
+    ::after {
+      font-size: 16px;
+      color: var(--text-color1);
+      font-weight: 700;
+    }
+    .swiper-button-prev {
+      width: 56px;
+      height: 56px;
+      background-color: var(--color-white);
+      opacity: 0.56;
+      border-radius: 100%;
+    }
+  }
+}
+.catogories {
+  img {
+    width: 100%;
+    cursor: pointer;
+  }
+}
+.btn-card-wrap-filter {
+  width: 100%;
+}
+.product-preview_wrap {
+  .preview_box {
+    position: sticky;
+    top: 10%;
+    display: flex;
+    gap: 15px;
+
+    .vertical_swpr,
+    .swiper {
+      max-height: 418px;
+
+      .swiper-button-next {
+        rotate: 90deg;
+        position: absolute;
+        top: 93%;
+        left: 26px;
+        padding: 41px 0px;
+        //font-size: 14px;
+        background-color: var(--bg-verticalSwp);
+        border: 1px solid var(--btn-border);
+      }
+      .swiper-button-next::after {
+        @include formText(var(--color-white), 14px, 400, null);
+        content: ">";
+      }
+      .swiper-button-prev {
+        position: absolute;
+        background-color: var(--bg-verticalSwp);
+        border: 1px solid var(--btn-border);
+        rotate: 90deg;
+        padding: 41px 0px;
+        top: -6px;
+        left: 26px;
+      }
+      .swiper-button-prev::after {
+        @include formText(var(--color-white), 14px, 400, null);
+        content: "<";
+      }
+      .swiper-slide {
+        height: 25%;
+      }
+      .sml-img {
+        img {
+          max-width: 80px;
+        }
+      }
+    }
+    .imageBox {
+      overflow: hidden;
+      img {
+        width: 100%;
+        scale: 1.5;
+      }
+      img:hover {
+        scale: 1.5;
+      }
+    }
+  }
+  .productDetails_wrap {
+    @include borderBackground(none, var(--color-white), 4px, var(--box-shadow1));
+    padding: 19px 22px 40px;
+    text-align: left;
+    h3 {
+      @include formText(var(--header-black), 20px, 500, 26px);
+      margin: 0px;
+      text-align: left;
+    }
+    span {
+      @include formText(var(--text-color1), 14px, 400, 20px);
+      text-align: left;
+    }
+    .price-offer_box {
+      @include flextype(null, center);
+      gap: 10px;
+      padding: 10px 0px 5px;
+      h3 {
+        @include formText(var(--color-footer-bottom), 22px, 600, 30px);
+        text-align: left;
+      }
+      span {
+        @include formText(var(--color-green), 14px, 400, 17px);
+        text-align: left;
+      }
+      // .point_box {
+      //   background-color: #fafafa;
+      //   border: 1px solid #efefef;
+      //   border-radius: 4px;
+      //   text-align: center;
+      //   margin-left: 5px;
+      //   padding: 0px 16px;
+
+      //   span {
+      //     @include formText(var(--header-black), 12px, 400, 0px);
+      //     text-align: left;
+      //   }
+      // }
+    }
+    .mrp_box {
+      @include formText(var(--text-color1), 14px, 400, 20px);
+      span {
+        text-decoration: line-through;
+        margin-right: 7px;
+      }
+    }
+    .available_colors {
+      margin: 20px 0px;
+      span {
+        @include formText(var(--header-black), 16px, 600, 20px);
+        text-align: left;
+      }
+    }
+    .select-size-box {
+      .name-size {
+        @include flextype(null, center);
+        gap: 20px;
+
+        h3 {
+          @include formText(var(--header-black), 16px, 600, 20px);
+          text-align: left;
+          margin: 0px;
+        }
+        span {
+          @include formText(var(--color-lightblue), 14px, 400, 20px);
+          text-align: left;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+      .size_box {
+        margin-top: 10px;
+        @include flextype(null, center);
+        gap: 10px;
+        .circle-div {
+          border: 1px solid var(--color-whitishgrey);
+          border-radius: 100%;
+          width: 44px;
+          height: 44px;
+          @include flextype(center, center);
+          cursor: pointer;
+          &.active-bg {
+            background-color: var(--active-size-bg);
+          }
+
+          span {
+            @include formText(var(--header-black), 14px, 400, 17px);
+            text-align: center;
+          }
+        }
+      }
+    }
+    .select-quantity {
+      margin: 20px 0px 30px;
+      span {
+        @include formText(var(--header-black), 16px, 600, 20px);
+        text-align: left;
+      }
+      .inc-dec-box {
+        @include flextype(null, center);
+        margin-top: 10px;
+        .count-display {
+          background-color: #ffffff;
+          border: 1px solid #efefef;
+          width: 77px;
+          height: 36px;
+          @include flextype(center, center);
+          @include formText(var(--count-color), 16px, 400, 24px);
+          text-align: center;
+        }
+        .btn-inc-dec {
+          background-color: #efefef;
+          border: 1px solid #efefef;
+          border-radius: 4px 0 0 4px;
+          width: 53px;
+          height: 36px;
+          text-align: center;
+          @include flextype(center, center);
+          cursor: pointer;
+          &.inc {
+            border-radius: 0px 4px 4px 0px;
+          }
+        }
+      }
+    }
+    .btn-cart-buy {
+      @include flextype(null, center);
+      gap: 20px;
+
+      button {
+        border: 0px;
+        padding: 11px 64px;
+        &.addcart {
+          background-color: var(--color-white);
+          border: 1px solid var(--text-color1);
+          border-radius: 4px;
+          @include formText(var(--text-color1), 16px, 400, 25px);
+          text-align: center;
+          white-space: nowrap;
+        }
+        &.buynow {
+          background-color: #ff7b10;
+          border-radius: 4px;
+          @include formText(var(--color-white), 16px, 400, 25px);
+          padding: 12px 73px;
+          white-space: nowrap;
+        }
+      }
+    }
+    .available_box {
+      margin: 30px 0px 20px;
+      background-color: var(--color-whitishgrey);
+      border-radius: 4px;
+
+      padding: 19px 26px;
+      span {
+        @include formText(var(--offer-available), 16px, 400, 19px);
+        text-align: left;
+      }
+      .offerDetails {
+        margin-top: 22px;
+        .img-offer-dtl {
+          @include flextype(null, center);
+          gap: 14px;
+          margin-bottom: 14px;
+          span {
+            @include formText(var(--offer-text), 14px, 400, 20px);
+            text-align: left;
+          }
+        }
+      }
+    }
+    .product-description {
+      margin-bottom: 30px;
+      h3 {
+        @include formText(var(--header-black), 16px, 600, 20px);
+        text-align: left;
+      }
+      span {
+        @include formText(var(--text-color1), 14px, 400, 20px);
+
+        text-align: left;
+        word-break: break-all;
+      }
+    }
+    .term-condition {
+      h3 {
+        @include formText(var(--header-black), 16px, 600, 20px);
+        text-align: left;
+      }
+      ol {
+        padding: 10px 0px 0px 17px;
+        margin: 0px;
+        li {
+          @include formText(var(--text-color1), 14px, 400, 20px);
+          text-align: left;
+          word-break: break-all;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+.similar_product {
+  .dashed-line {
+    border: 1px solid #ebe9e9;
+  }
+}
+
+//addressCSS
+.content-box-address{
+  text-align: left;
+  h4 {
+    @include formText(var(--color-footer-bottom), 22px, 600, 30px);
+    text-align: left;
+    &.smlh {
+      @include formText(var(--color-footer-bottom), 16px, 600, 20px);
+
+      text-align: left;
+    }
+  }
+  .confirmation_div {
+    margin-bottom: 30px;
+    .Order-delivery {
+      border: 1px solid #f1f1f1;
+      background-color: var(--bg-container-grey);
+      padding: 20px 24px;
+
+      .order-Id-dilevery {
+        span {
+          @include formText(var(--text-color1), 16px, 400, 20px);
+          text-align: left;
+        }
+        p {
+          @include formText(var(--header-black), 16px, 600, 20px);
+          text-align: left;
+        }
+      }
+    }
+    .msg-img {
+      @include flextype(null, center);
+      gap: 14px;
+      margin-bottom: 23px;
+      .h-span {
+        h4 {
+          @include formText(var(--color-footer-bottom), 22px, 500, 30px);
+          margin: 0px;
+          text-align: left;
+        }
+        span {
+          @include formText(var(--text-color1), 16px, 400, 20px);
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .addressDetails {
+    text-align: left;
+
+    .pd-div {
+      padding: 30px 0px;
+      width: 100%;
+      .input-group {
+        position: relative;
+        width: 100%;
+      }
+      .input-group:not(.has-validation)
+        > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+
+      .input-group .input-area {
+        outline: none;
+        border: 1px solid #a7a7a7;
+        padding: 12px 10px;
+        //@include formText(var())
+        font-size: 16px;
+        border-radius: 4px;
+        font-weight: 500;
+        width: 100%;
+      }
+
+      .input-area:valid + .label {
+        transition-duration: 1s;
+        top: -10px;
+        padding: 0 3px;
+        font-size: 14px;
+        color: #a7a7a7;
+      }
+
+      .input-group .input-area:focus {
+        border: 1px solid #a7a7a7;
+      }
+
+      .input-group .label {
+        color: #323232;
+        position: absolute;
+        top: 12px;
+        left: 13px;
+        background: #ffffff;
+      }
+
+      .input-group .input-area:focus + .label {
+        top: -10px;
+        padding: 0 3px;
+        font-size: 14px;
+        color: #a7a7a7;
+      }
+    }
+    .address-check-box {
+      margin: 16px 0px 36px;
+      @include flextype(null, center);
+      gap: 27px;
+      span {
+        @include formText(var(--offer-available), 16px, 400, 19px);
+        text-align: left;
+      }
+      .check-box-div {
+        @include flextype(null, center);
+        gap: 24px;
+        .chck-wrap {
+          @include flextype(null, center);
+          gap: 6px;
+
+          input[type="radio"]#radio {
+            border: 1px solid #ff7b10;
+
+            width: 20px;
+            height: 20px;
+          }
+          span {
+            @include formText(var(--radioText), 16px, 400, 20px);
+            text-align: left;
+            &.activecls {
+              @include formText(var(--header-black), 16px, 400, 20px);
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+    .term_condition {
+      @include flextype(null, center);
+      gap: 10px;
+      input[type="checkbox"] {
+        accent-color: var(--color-green);
+        border: 1px solid #29b506;
+        border-radius: 2px;
+        width: 20px;
+        height: 20px;
+        background-color: var(--color-white);
+      }
+      span {
+        @include formText(var(--offer-available), 16px, 400, 19px);
+        text-align: left;
+        a {
+          text-decoration: underline;
+          cursor: pointer;
+          :hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .review_order {
+    .dashedline {
+      border: 1px dashed #e4e4e4;
+    }
+    .order-details-wrap {
+      text-align: left;
+      h4 {
+        @include formText(var(--header-black), 16px, 600, 20px);
+        text-align: left;
+        padding: 30px 0px 19px;
+        margin: 0px;
+      }
+      .order-details {
+        span {
+          @include formText(var(--text-color1), 14px, 400, 20px);
+
+          text-align: left;
+        }
+        .purchase-details {
+          border-top: 1px solid var(--border-discrip);
+          padding-top: 28px;
+
+          .purchase-descrip {
+            @include flextype(null);
+            gap: 12px;
+            .items-details {
+              .h-span {
+                margin-bottom: 6px;
+                h6 {
+                  @include formText(var(--header-black), 16px, 600, 20px);
+                  text-align: left;
+                  margin: 0px;
+                }
+                p {
+                  @include formText(var(--header-black), 16px, 600, 20px);
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                  width: 160px;
+
+                  white-space: nowrap;
+                  margin: 0px;
+                }
+                p:hover {
+                  overflow: initial;
+                  white-space: normal;
+                }
+              }
+              .size-color {
+                margin-bottom: 11px;
+                span {
+                  background-color: rgba(236, 239, 241, 0.4);
+                  border-radius: 5px;
+                  @include formText(var(--count-color), 14px, 400, 24px);
+                  text-align: center;
+                  padding: 3px 12px;
+                  &:last-child {
+                    margin-left: 25px;
+                  }
+                }
+              }
+              .shipingBox {
+                @include formText(var(--text-color1), 14px, 400, 20px);
+                span {
+                  color: var(--header-black);
+                }
+              }
+            }
+          }
+          .count {
+            padding-top: 28px;
+            .spanPrice {
+              @include formText(var(--color-black), 18px, 400, 20px);
+              text-align: left;
+            }
+            .point_box {
+              background-color: #fafafa;
+              border: 1px solid #efefef;
+              border-radius: 4px;
+              text-align: center;
+              margin-left: 5px;
+              width: 69px;
+              height: 22px;
+              padding: 2px;
+
+              span {
+                @include formText(var(--header-black), 12px, 400, 0px);
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+    }
+    .review-details {
+      text-align: left;
+      button {
+        border: none;
+        background-color: var(--color-white);
+        @include formText(var(--header-black), 16px, 400, 20px);
+        text-align: left;
+        margin: 24px 0px 30px;
+      }
+      .addressdetailsReview {
+        padding: 28px 16px;
+        margin-top: 12px;
+        background-color: rgba(235, 235, 236, 0.09);
+        border: 1px dashed rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        input[type="radio"] {
+          margin-top: 10px;
+          width: 20px;
+          height: 20px;
+        }
+        &.active {
+          background-color: rgba(253, 221, 75, 0.02);
+          border: 1px dashed var(--border-active);
+        }
+        border-radius: 4px;
+        @include flextype(null, flex-start);
+        gap: 14px;
+        .customer-details {
+          width: 100%;
+          .name-action {
+            @include flextype(space-between, center);
+            .action {
+              @include flextype(null, center);
+              gap: 16px;
+              img {
+                cursor: pointer;
+              }
+            }
+            .name-details {
+              @include flextype(null, center);
+              gap: 12px;
+              h5 {
+                @include formText(var(--header-black), 16px, 600, 20px);
+
+                text-align: left;
+                margin: 0px;
+              }
+              span {
+                @include formText(var(--text-color1), 14px, 400, 20px);
+                text-align: left;
+                &.boxspan {
+                  background-color: #f3f0f0;
+                  border-radius: 4px;
+                  padding: 0px 14px;
+                }
+              }
+            }
+          }
+          .ord-address-box {
+            span {
+              @include formText(var(--text-color1), 14px, 400, 20px);
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .order_summary {
+    text-align: left;
+    h4 {
+      @include formText(var(--header-black), 18px, 500, 26px);
+      text-align: left;
+    }
+    ul {
+      margin: 0px;
+      list-style: none;
+      padding: 0px;
+      &.ul-box {
+        margin: 10px 0px 26px 0px;
+        padding: 0px 10px 19px;
+        background-color: var(--ul-bg);
+        border-radius: 4px;
+      }
+      li {
+        @include flextype(space-between, center);
+        padding: 18px 0px 0px;
+        @include formText(var(--text-color1), 16px, 400, 19px);
+        text-align: left;
+        span {
+          @include formText(var(--color-black), 16px, 400, 20px);
+          text-align: right;
+        }
+      }
+    }
+    .order-btn-div {
+      @include flextype(center, null);
+      flex-direction: column;
+      gap: 18px;
+      border-top: 1px solid var(--bg-brd);
+      padding-top: 26px;
+      button {
+        border: none;
+        padding: 13px 0px;
+        @include formText(var(--text-color1), 16px, 400, 25px);
+        background-color: var(--color-white);
+        border: 1px solid var(--text-color1);
+        border-radius: 4px;
+        text-align: center;
+        &.prcd_prcs {
+          background-color: var(--color-orange);
+          border-radius: 4px;
+          border: none;
+          @include formText(var(--color-white), 16px, 400, 25px);
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+//CartCss
+.modalCart {
+  padding-right: 0px !important;
+
+  .modal-dialog {
+    margin: 0px 0px 0px auto;
+    max-width: 662px;
+
+    .modal-content {
+      border-radius: 0px;
+
+      min-height: 100vh;
+      .modal-header {
+        background-color: var(--color-white);
+        border-radius: 4px;
+        box-shadow: 0 4px 10px 0 rgba(133, 88, 88, 0.05);
+        border-bottom: none;
+      }
+      .modal-body {
+        border-bottom: none;
+        padding: 20px;
+        .cart-wrap {
+          .product-div {
+            background-color: var(--color-white);
+            border: 1px solid var(--color-whitishgrey);
+            border-radius: 4px;
+            padding: 20px;
+            @include flextype(null, flex-start);
+            gap: 10px;
+            .img-prd {
+              width: 90px;
+              height: 90px;
+            }
+            .prd-descrption {
+              width: 100%;
+              .name-dlt {
+                @include flextype(space-between, center);
+                h6 {
+                  @include formText(var(--header-black), 16px, 600, 20px);
+                  text-align: left;
+                }
+              }
+              .price-pts {
+                @include flextype(null, center);
+                gap: 18px;
+                .spantxt {
+                  @include formText(var(--header-black), 16px, 500, 20px);
+                  text-align: left;
+                }
+
+                .pts-box {
+                  background-color: var(--bg-tableHeader);
+                  border: 1px solid var(--color-whitishgrey);
+                  border-radius: 4px;
+                  padding: 0px 15px;
+                  span {
+                    @include formText(var(--header-black), 12px, 400, null);
+
+                    text-align: left;
+                  }
+                }
+              }
+              .quantity-size-wrap {
+                @include flextype(null, center);
+                gap: 30px;
+                margin: 20px 0px 10px;
+                .quantity-box {
+                  span {
+                    @include formText(var(--header-black), 16px, 600, 20px);
+                    text-align: left;
+                  }
+                  .inc-dec-box {
+                    @include flextype(null, center);
+                    margin-top: 10px;
+                    .count-display {
+                      background-color: #ffffff;
+                      border: 1px solid #efefef;
+                      width: 77px;
+                      height: 36px;
+                      @include flextype(center, center);
+                      @include formText(var(--count-color), 16px, 400, 24px);
+                      text-align: center;
+                    }
+                    .btn-inc-dec {
+                      background-color: #efefef;
+                      border: 1px solid #efefef;
+                      border-radius: 4px 0 0 4px;
+                      width: 53px;
+                      height: 36px;
+                      text-align: center;
+                      @include flextype(center, center);
+                      cursor: pointer;
+                      &.inc {
+                        border-radius: 0px 4px 4px 0px;
+                      }
+                    }
+                  }
+                }
+                .size-box-div {
+                  span {
+                    @include formText(var(--header-black), 16px, 600, 20px);
+                    text-align: left;
+                  }
+
+                  .size-box {
+                    background-color: var(--color-white);
+                    border: 1px solid var(--color-whitishgrey);
+                    border-radius: 4px 4px 0px 0px;
+
+                    margin-top: 9px;
+                    position: relative;
+                    @include flextype(null, center);
+
+                    span {
+                      @include formText(var(--count-color), 16px, 400, 24px);
+                      text-align: center;
+                      padding: 0px 15px;
+                    }
+
+                    .clk-box {
+                      background-color: var(--color-whitishgrey);
+                      width: 28px;
+                      height: 36px;
+                      text-align: center;
+                    }
+                    .drpdown {
+                      position: absolute;
+                      right: 0px;
+                      top: 36px;
+                      background-color: var(--color-white);
+                      border: 1px solid var(--color-whitishgrey);
+                      padding: 0px 15px;
+                      margin: 0px;
+                      list-style: none;
+                      width: 100%;
+                      border-radius: 0px 0px 4px 4px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .summary-box {
+            padding-top: 52px;
+            h6 {
+              text-align: left;
+              @include formText(var(--header-black), 18px, 500, 26px);
+            }
+            .summary-details {
+              background-color: var(--color-whitishgrey);
+              border-radius: 4px;
+              ul {
+                padding: 20px;
+                margin: 0px;
+                list-style: none;
+                li {
+                  @include flextype(space-between, center);
+                  @include formText(var(--text-color1), 16px, 400, 19px);
+                  text-align: left;
+                  margin-bottom: 20px;
+                  &:last-child {
+                    margin-bottom: 0px;
+                    @include formText(var(--header-black), 18px, 400, 22px);
+                    text-align: left;
+                  }
+
+                  span {
+                    @include formText(var(--color-black), 16px, 400, 20px);
+                    text-align: right;
+                  }
+                }
+              }
+            }
+            .summary-btn-wrap {
+              @include flextype(center, null);
+              flex-direction: column;
+              gap: 18px;
+              padding-top: 26px;
+              button {
+                border: none;
+                padding: 13px 0px;
+                @include formText(var(--text-color1), 16px, 400, 25px);
+                background-color: var(--color-white);
+                border: 1px solid var(--text-color1);
+                border-radius: 4px;
+                text-align: center;
+                &.prcd_prcs {
+                  background-color: #ff7b10;
+                  border-radius: 4px;
+                  border: none;
+                  @include formText(var(--color-white), 16px, 400, 25px);
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 912px) {
+  .top-view {
+    span {
+      @include formText(var(--color-footer-bottom), 16px, 600, 19px);
+    }
+    button {
+      @include formText(var(--color-black), 14px, 400, 17px);
+    }
+  }
+}

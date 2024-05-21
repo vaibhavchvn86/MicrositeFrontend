@@ -1,0 +1,14 @@
+@import "../../Assets/Style/mixin.scss";
+
+.dealTabs {
+  @include flextype(space-between, center);
+  .tab-block {
+    @include flextype(center, center);
+    flex-direction: column;
+    gap: 7px;
+    cursor: pointer;
+    span {
+      @include formText(var(--text-color1), 12px, 400, 14px);
+    }
+  }
+}

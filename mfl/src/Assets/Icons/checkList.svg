@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="32px" viewBox="0 0 30 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>FE4DA2B6-EEB7-4DDA-A551-814EA82CDC97</title>
+    <g id="WEB" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Style-Guide-TRC" transform="translate(-53, -318)">
+            <g id="1622833_checkmark_done_exam_list_pencil_icon" transform="translate(53, 318)">
+                <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="0" y="0" width="23" height="28"></rect>
+                <rect id="Rectangle" stroke="#242C88" stroke-linecap="round" stroke-linejoin="round" x="0" y="0" width="23" height="28"></rect>
+                <path d="M7.28571429,10 L3.71428571,10 C3.32142857,10 3,9.67857143 3,9.28571429 L3,5.71428571 C3,5.32142857 3.32142857,5 3.71428571,5 L7.28571429,5 C7.67857143,5 8,5.32142857 8,5.71428571 L8,9.28571429 C8,9.67857143 7.67857143,10 7.28571429,10 Z" id="Path" fill="#FEDEAA" fill-rule="nonzero"></path>
+                <path d="M7.21428571,17 L3.71428571,17 C3.32142857,17 3,16.6785714 3,16.2857143 L3,12.7142857 C3,12.3214286 3.32142857,12 3.71428571,12 L7.28571429,12 C7.67857143,12 8,12.3214286 8,12.7142857 L8,16.2142857 C8,16.6428571 7.64285714,17 7.21428571,17 Z" id="Path" fill="#FEDEAA" fill-rule="nonzero"></path>
+                <path d="M7.28571429,24 L3.71428571,24 C3.32142857,24 3,23.6785714 3,23.2857143 L3,19.7142857 C3,19.3214286 3.32142857,19 3.71428571,19 L7.28571429,19 C7.67857143,19 8,19.3214286 8,19.7142857 L8,23.2857143 C8,23.6785714 7.67857143,24 7.28571429,24 Z" id="Path" fill="#FEDEAA" fill-rule="nonzero"></path>
+                <path d="M7.28571429,10 L3.71428571,10 C3.32142857,10 3,9.67857143 3,9.28571429 L3,5.71428571 C3,5.32142857 3.32142857,5 3.71428571,5 L7.28571429,5 C7.67857143,5 8,5.32142857 8,5.71428571 L8,9.28571429 C8,9.67857143 7.67857143,10 7.28571429,10 Z" id="Path" stroke="#242C88" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M7.21428571,17 L3.71428571,17 C3.32142857,17 3,16.6785714 3,16.2857143 L3,12.7142857 C3,12.3214286 3.32142857,12 3.71428571,12 L7.28571429,12 C7.67857143,12 8,12.3214286 8,12.7142857 L8,16.2142857 C8,16.6428571 7.64285714,17 7.21428571,17 Z" id="Path" stroke="#242C88" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M7.28571429,24 L3.71428571,24 C3.32142857,24 3,23.6785714 3,23.2857143 L3,19.7142857 C3,19.3214286 3.32142857,19 3.71428571,19 L7.28571429,19 C7.67857143,19 8,19.3214286 8,19.7142857 L8,23.2857143 C8,23.6785714 7.67857143,24 7.28571429,24 Z" id="Path" stroke="#242C88" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M23,28 L23,2 L5.67924528,2 C5.30566038,2 5,2.3038961 5,2.67532468 L5,28 L23,28 Z" id="Path" fill="#242C88" fill-rule="nonzero" opacity="0.2"></path>
+                <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="7" y="4" width="23" height="28"></rect>
+                <rect id="Rectangle" stroke="#242C88" stroke-linecap="round" stroke-linejoin="round" x="7" y="4" width="23" height="28"></rect>
+                <line x1="18" y1="12" x2="22" y2="12" id="Path" stroke="#242C88" opacity="0.2" stroke-linecap="round" stroke-linejoin="round"></line>
+                <line x1="18" y1="10" x2="26" y2="10" id="Path" stroke="#242C88" opacity="0.2" stroke-linecap="round" stroke-linejoin="round"></line>
+                <path d="M14.2857143,14 L10.7142857,14 C10.3214286,14 10,13.6785714 10,13.2857143 L10,9.71428571 C10,9.32142857 10.3214286,9 10.7142857,9 L14.2857143,9 C14.6785714,9 15,9.32142857 15,9.71428571 L15,13.2857143 C15,13.6785714 14.6785714,14 14.2857143,14 Z" id="Path" fill="#FEDEAA" fill-rule="nonzero"></path>
+                <polyline id="Path" stroke="#242C88" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" points="11 12.0689655 12.0116279 13 14 11"></polyline>
+                <line x1="18" y1="20" x2="22" y2="20" id="Path" stroke="#242C88" opacity="0.2" stroke-linecap="round" stroke-linejoin="round"></line>
+                <line x1="18" y1="17" x2="26" y2="17" id="Path" stroke="#242C88" opacity="0.2" stroke-linecap="round" stroke-linejoin="round"></line>
+                <path d="M14.2857143,20 L10.7142857,20 C10.3214286,20 10,19.6785714 10,19.2857143 L10,15.7142857 C10,15.3214286 10.3214286,15 10.7142857,15 L14.2142857,15 C14.6428571,15 15,15.3571429 15,15.7857143 L15,19.2857143 C15,19.6785714 14.6785714,20 14.2857143,20 Z" id="Path" fill="#FEDEAA" fill-rule="nonzero"></path>
+                <polyline id="Path" stroke="#242C88" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" points="11 18.0526316 12.0116279 19 14 17"></polyline>
+                <line x1="18" y1="26" x2="22" y2="26" id="Path" stroke="#242C88" opacity="0.2" stroke-linecap="round" stroke-linejoin="round"></line>
+                <line x1="18" y1="24" x2="26" y2="24" id="Path" stroke="#242C88" opacity="0.2" stroke-linecap="round" stroke-linejoin="round"></line>
+                <path d="M14.2857143,27 L10.7142857,27 C10.3214286,27 10,26.6785714 10,26.2857143 L10,22.7142857 C10,22.3214286 10.3214286,22 10.7142857,22 L14.2857143,22 C14.6785714,22 15,22.3214286 15,22.7142857 L15,26.2857143 C15,26.6785714 14.6785714,27 14.2857143,27 Z" id="Path" fill="#FEDEAA" fill-rule="nonzero"></path>
+                <polyline id="Path-Copy" stroke="#242C88" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" points="11 25.0689655 12.0116279 26 14 24"></polyline>
+                <path d="M14.2857143,14 L10.7142857,14 C10.3214286,14 10,13.6785714 10,13.2857143 L10,9.71428571 C10,9.32142857 10.3214286,9 10.7142857,9 L14.2857143,9 C14.6785714,9 15,9.32142857 15,9.71428571 L15,13.2857143 C15,13.6785714 14.6785714,14 14.2857143,14 Z" id="Path" stroke="#242C88" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M14.2857143,20 L10.7142857,20 C10.3214286,20 10,19.6785714 10,19.2857143 L10,15.7142857 C10,15.3214286 10.3214286,15 10.7142857,15 L14.2142857,15 C14.6428571,15 15,15.3571429 15,15.7857143 L15,19.2857143 C15,19.6785714 14.6785714,20 14.2857143,20 Z" id="Path" stroke="#242C88" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M14.2857143,27 L10.7142857,27 C10.3214286,27 10,26.6785714 10,26.2857143 L10,22.7142857 C10,22.3214286 10.3214286,22 10.7142857,22 L14.2857143,22 C14.6785714,22 15,22.3214286 15,22.7142857 L15,26.2857143 C15,26.6785714 14.6785714,27 14.2857143,27 Z" id="Path" stroke="#242C88" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

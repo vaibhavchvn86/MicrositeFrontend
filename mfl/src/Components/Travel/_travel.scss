@@ -1,0 +1,510 @@
+@import "../../Assets/Style/mixin.scss";
+
+.travel_div {
+    .travel_option {
+        @include borderBackground(none, var(--color-white), none, var(--box-shadow1));
+        padding-top: 30px;
+        padding-left: 10%;
+        .nav-tabs {
+            border: none;
+        }
+        .nav-item {
+            &:hover {
+                border: none;
+            }
+            .nav-link {
+                @include formText(var(--text-color1), 12px, 400, 14px);
+                padding-bottom: 20px;
+                &:hover {
+                    border: none;
+                }
+                &.active {
+                    border: none;
+                    border-bottom: 4px solid var(--color-yellow);
+                }
+            }
+        }
+    }
+    .tab-content {
+        background-color: var(--bg-tableHeader);
+        padding: 0 10%;
+        padding-top: 30px;
+        .flights_div {
+            .flight_search {
+                @include borderBackground(none, var(--color-white), 4px, var(--box-shadow1));
+                padding: 15px;
+                .trip_type {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    padding-bottom: 15px;
+                    .selected_trip_type {
+                        @include flextype(unset, center);
+                        gap: 5px;
+                        input[type="radio"] {
+                            accent-color: var(--header-black);
+                        }
+                        input[type="radio"] + label {
+                            @include formText(var(--text-color2), 14px, 400, 17px);
+                        }
+                        input[type="radio"]:checked + label {
+                            color: var(--header-black);
+                        }
+                    }
+                }
+                .search_detail {
+                    .sub_searchDiv {
+                        @include flextype(space-between, center);
+                        gap: 10px;
+                        // &:last-child{
+                        //     padding-left: 0;
+                        // }
+                        .passan_div {
+                            position: relative;
+                            .select_pass_div {
+                                width: 500px;
+                                position: absolute;
+                                right: 0;
+                                @include borderBackground(none, var(--color-white), 4px, var(--box-shadow1));
+                                z-index: 9;
+                                padding: 20px;
+                                .traveller_list {
+                                    @include flextype(space-between, center);
+                                    span {
+                                        @include formText(var(--color-lightblue), 13px, 400, 16px);
+                                        cursor: pointer;
+                                    }
+                                }
+                                .age_limit {
+                                    text-align: left;
+                                    padding-top: 10px;
+                                    p {
+                                        margin: 0;
+                                        @include formText(var(--color-black), 18px, 500, 22px);
+                                    }
+                                    label {
+                                        @include formText(var(--text-color7), 13px, 400, 16px);
+                                    }
+                                }
+                                .traveller_count {
+                                    @include borderBackground(none, var(--color-white), 5px, var(--box-shadow1));
+                                    padding: 0 20px;
+                                    margin: 10px 0;
+                                    ul {
+                                        list-style: none;
+                                        @include flextype(space-between, center);
+                                        padding: 0;
+                                        margin: 0;
+                                        height: 45px;
+                                        li {
+                                            cursor: pointer;
+                                            @include formText(var(--text-color7), 16px, 500, 19px);
+                                            &.active {
+                                                color: var(--color-white);
+                                                padding: 8px 13px;
+                                                @include borderBackground(none, var(--color-orange), 50%, unset);
+                                            }
+                                        }
+                                    }
+                                }
+                                .travel_type {
+                                    padding-top: 15px;
+                                    position: relative;
+                                    .select_type {
+                                        @include flextype(left, center);
+                                        gap: 15px;
+                                        padding: 10px 0 15px;
+                                        button {
+                                            @include buttonCss(var(--text-color1), 16px, 400, var(--color-white), 4px);
+                                            border: 1px solid var(--text-color1);
+                                            padding: 5px 15px;
+                                            &.active {
+                                                color: var(--color-orange);
+                                                border: 1px solid var(--color-orange);
+                                            }
+                                        }
+                                    }
+                                    &::after {
+                                        content: "";
+                                        position: absolute;
+                                        width: 100%;
+                                        left: 0;
+                                        border-bottom: 1px solid var(--color-whitishgrey);
+                                    }
+                                }
+                                .selected_travellers {
+                                    text-align: end;
+                                    padding-top: 15px;
+                                    button {
+                                        @include buttonCss(
+                                            var(--color-white),
+                                            16px,
+                                            400,
+                                            var(--color-orange),
+                                            4px,
+                                            25px
+                                        );
+                                        border: none;
+                                        padding: 5px 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .search_btn {
+                        @include buttonCss(var(--color-white), 16px, 400, var(--color-orange), 4px, 25px);
+                        border: none;
+                        padding: 5px 0;
+                        width: 50%;
+                    }
+                }
+            }
+            .flight_avl {
+                padding: 30px 0;
+                .price_date_content {
+                    .price_date {
+                        @include borderBackground(1px solid var(--bg-dashed), var(--color-white), 3px, none);
+                        padding: 5px;
+                        p {
+                            margin: 0;
+                            @include formText(var(--text-color7), 12px, 600, 20px);
+                        }
+                        label {
+                            @include formText(var(--color-green), 14px, 400, 20px);
+                        }
+                        &.pd_select {
+                            @include borderBackground(
+                                1px solid var(--color-lightblue),
+                                var(--color-white),
+                                4px,
+                                var(--box-shadow1)
+                            );
+                            p {
+                                @include formText(var(--color-lightblue), 12px, 600, 20px);
+                            }
+                            label {
+                                @include formText(var(--color-lightblue), 14px, 400, 20px);
+                            }
+                        }
+                    }
+                    .swiper-button-prev {
+                        &::after {
+                            content: url("../../Assets/Icons/double_arrow_left.svg");
+                            @include borderBackground(none, var(--color-white), 4px, var(--box-shadow1));
+                            padding: 0 22px 22px;
+                        }
+                    }
+                    .swiper-button-next {
+                        &::after {
+                            content: url("../../Assets/Icons/double_arrow_right.svg");
+                            @include borderBackground(none, var(--color-white), 4px, var(--box-shadow1));
+                            padding: 0 26px 22px 22px;
+                        }
+                    }
+                }
+                .sorting_div {
+                    padding: 30px 0 20px;
+                    @include flextype(space-between, center);
+                    h4 {
+                        @include formText(var(--color-footer-bottom), 22px, 600, 30px);
+                    }
+                    .sort_by {
+                        button {
+                            @include borderBackground(1px solid var(--text-color2), var(--color-white), 3px, none);
+                            min-width: 148px;
+                            text-align: start;
+                            padding: 6px;
+                            outline: none;
+                            @include formText(var(--color-black), 14px, 400, 17px);
+                            &::after {
+                                position: absolute;
+                                content: url(../../Assets/Icons/downArrow.svg);
+                                right: 6px;
+                                bottom: 8px;
+                                border: none;
+                            }
+                        }
+
+                        .dropdown-menu {
+                            @include borderBackground(none, var(--color-white), 4px);
+                            .dropdown-item {
+                                position: relative;
+                                &::after {
+                                    position: absolute;
+                                    content: "";
+                                    border-bottom: 1px solid var(--color-whitishgrey);
+                                }
+                            }
+                        }
+                    }
+                }
+                .flight_list {
+                    .flight_detail {
+                        position: relative;
+                        margin-bottom: 20px;
+                        padding: 25px 15px;
+                        @include flextype(space-between, center);
+                        @include borderBackground(none, var(--color-white), 4px, var(--box-shadow1));
+
+                        .tag {
+                            @include flextype(space-between, center);
+                            @include formText(var(--color-lightblue), 14px, 500, 20px);
+                            @include borderBackground(none, var(--bg-color1), 5px, none);
+                            padding: 0 4px;
+                            position: absolute;
+                            top: 4px;
+                            right: 15px;
+                        }
+                        .flight_name {
+                            gap: 10px;
+                            img {
+                                padding: 6px;
+                                border-radius: 50%;
+                                background-color: rgb(166, 88, 88);
+                            }
+                            @include flextype(unset, center);
+                            .flightname_sub {
+                                label {
+                                    @include formText(var(--header-black), 20px, 600, 28px);
+                                }
+                                p {
+                                    @include formText(var(--text-color1), 14px, 400, 20px);
+                                    margin: 0;
+                                }
+                            }
+                        }
+                        .flight_time {
+                            @include flextype(unset, center);
+                            gap: 15px;
+                            .sub_flight_time {
+                                label {
+                                    @include formText(var(--header-black), 18px, 500, 26px);
+                                }
+                                p {
+                                    @include formText(var(--text-color1), 14px, 400, 20px);
+                                    margin: 0;
+                                }
+                            }
+                            .duration {
+                                position: relative;
+                                padding: 10px 15px;
+                                @include formText(var(--border-color1), 12px, 400, 14px);
+                                &::after {
+                                    content: "";
+                                    width: 100%;
+                                    left: 0;
+                                    bottom: 4px;
+                                    position: absolute;
+                                    padding: 1.5px;
+                                    background-color: var(--border-color2);
+                                }
+                            }
+                        }
+                        .flight_price {
+                            @include flextype(unset, center);
+                            gap: 10px;
+                            .sub_flightPrice {
+                                label {
+                                    @include formText(var(--header-black), 20px, 600, 28px);
+                                    font-family: var(--font-helvetica);
+                                }
+                                p {
+                                    @include formText(var(--text-color1), 14px, 400, 20px);
+                                    margin: 0;
+                                }
+                            }
+                            .detail_btn {
+                                @include buttonCss(var(--color-orange), 16px, 400, var(--color-white), 4px);
+                                border: 1px solid var(--color-orange);
+                                padding: 7px 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1100px) {
+    .travel_div {
+        .tab-content {
+            .flights_div {
+                .flight_search {
+                    .search_detail {
+                        .with_label_input {
+                            .form__input {
+                                font-size: 14px;
+                            }
+                            .form__label {
+                                font-size: 14px;
+                            }
+                        }
+                        .search_btn {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    .travel_div {
+        .travel_option {
+            padding-left: 5%;
+        }
+        .tab-content {
+            padding: 0 5%;
+            padding-top: 30px;
+            .flights_div {
+                .flight_search {
+                    .search_detail {
+                        .sub_searchDiv {
+                            flex-wrap: wrap;
+                            .with_label_input {
+                                width: 48%;
+                            }
+                            .passan_div {
+                                .select_pass_div {
+                                    width: 100%;
+                                    .traveller_list {
+                                        span {
+                                            font-size: 11px;
+                                        }
+                                    }
+                                    .age_limit {
+                                        p {
+                                            font-size: 16px;
+                                        }
+                                        label {
+                                            font-size: 11px;
+                                        }
+                                    }
+                                    .traveller_count {
+                                        ul {
+                                            li {
+                                                font-size: 14px;
+                                            }
+                                        }
+                                    }
+                                    .travel_type {
+                                        padding-top: 15px;
+                                        .select_type {
+                                            gap: 15px;
+                                            button {
+                                                font-size: 14px;
+                                                padding: 5px;
+                                            }
+                                        }
+                                    }
+                                    .selected_travellers {
+                                        button {
+                                            font-size: 14px;
+                                            padding: 5px 20px;
+                                        }
+                                    }
+                                }
+                            }
+                            .search_btn {
+                                width: 48%;
+                                padding: 7px 0;
+                            }
+                        }
+                    }
+                }
+                .flight_avl {
+                    .flight_list {
+                        .flight_detail {
+                            .tag {
+                                font-size: 12px;
+                            }
+                            .flight_name .flightname_sub,
+                            .flight_time .sub_flight_time,
+                            .flight_price .sub_flightPrice {
+                                label {
+                                    font-size: 14px;
+                                    line-height: 17px;
+                                }
+                                p {
+                                    font-size: 12px;
+                                    line-height: 10px;
+                                }
+                            }
+                            .flight_price {
+                                .detail_btn {
+                                    font-size: 14px;
+                                    line-height: 17px;
+                                    padding: 5px 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .travel_div {
+        .tab-content {
+            .flights_div {
+                .flight_search {
+                    .search_detail {
+                        .sub_searchDiv {
+                            .with_label_input {
+                                width: 100%;
+                            }
+                            .search_btn {
+                                width: 100%;
+                                padding: 7px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .travel_div {
+        .tab-content {
+            .flights_div {
+                .flight_avl {
+                    .sorting_div {
+                        h4 {
+                            font-size: 18px;
+                            line-height: 28px;
+                        }
+                        .sort_by {
+                            min-width: 85px;
+                        }
+                    }
+                    .flight_list {
+                        .flight_detail {
+                            flex-direction: column;
+                            padding: 15px;
+                            .tag {
+                                top: 15px;
+                            }
+                            .flight_name,
+                            .flight_time,
+                            .flight_price {
+                                width: 100%;
+                            }
+                            .flight_time,
+                            .flight_price {
+                                padding-top: 15px;
+                                justify-content: space-between;
+                                .detail_btn {
+                                    padding: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
